@@ -4,12 +4,13 @@ module Players
   
     def move(board)
       if defence(board)
-        defence(board)
+        resault = defence(board)
       elsif offence(board)
-        offence(board)
+        resault = offence(board)
       else 
-        random(board)
+        resault = random(board)
       end
+      resault
     end
     
     def defence(board)
@@ -35,7 +36,7 @@ module Players
       cs = c.shuffle
       corner = cs.detect {|n| board.valid_move?(n)}
       if board.valid_move?("5")
-        "5"
+        resault = "5"
       elsif corner != nil 
         corner
       else 
