@@ -4,14 +4,16 @@ module Players
   
     def move(board)
       d = defence(board).detect {|c| board.cells[c] == " "}
-      o = offence(board).detect {|c| board.cells[c] == " "}
+      #o = offence(board).detect {|c| board.cells[c] == " "}
       r = random(board)
       binding.pry
       #d || o || r
     end
     
     def defence(board)
-      a = [" ", "#{self.token}", "#{self.token}"]
+      a = [" "]
+      a << self.token
+      a << self.token
       Game::WIN_COMBINATIONS.detect {|wc|
       d = []
       d << board.cells[wc[0]]
