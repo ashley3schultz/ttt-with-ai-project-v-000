@@ -40,7 +40,7 @@ module Players
       elsif corner != nil 
         corner
       else 
-        rand(1..9)
+        rand(1..9).to_s
       end
     end
   end
