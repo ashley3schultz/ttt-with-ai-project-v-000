@@ -34,11 +34,11 @@ module Players
     end
     
     def find_space(board)
-      if defence(board)
-        defence(board).detect {|c| board.cells[c] == " "}
-      else offence(board)
-        offence(board).detect {|c| board.cells[c] == " "}
-      end
+      cell = defence(board).detect {|c| board.cells[c] == " "}
+      cell += 1
+      #else offence(board)
+        #offence(board).detect {|c| board.cells[c] == " "}
+      #end
     end
       
     
