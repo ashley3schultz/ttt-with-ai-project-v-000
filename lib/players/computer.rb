@@ -1,8 +1,6 @@
 module Players
 
   class Computer < Player
-    
-    attr_reader :WIN_COMBINATIONS
   
     def move(board)
       if !defence && !offence
@@ -13,7 +11,7 @@ module Players
     end
     
     def offence
-      WIN_COMBINATIONS.detect {|wc| 
+      Game::WIN_COMBINATIONS.detect {|wc| 
         o = []
         o << board.cells[wc[0]] if board.cells[wc[0]] == !self.token && board.cells[wc[0]] != " "
         o << board.cells[wc[1]] if board.cells[wc[1]] == !self.token && board.cells[wc[1]] != " "
@@ -22,7 +20,7 @@ module Players
     end
     
     def defence
-      WIN_COMBINATIONS.detect {|wc| 
+      Game::WIN_COMBINATIONS.detect {|wc| 
         d = []
         d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
         d << board.cells[wc[1]] if board.cells[wc[1]] == self.token
