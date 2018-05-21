@@ -4,12 +4,13 @@ module Players
   
     def move(board)
       if defence(board)
-        defence(board).detect {|c| c == " "}
+        resault = defence(board).detect {|c| c == " "}
       elsif offence(board)
-        offence(board).detect {|c| c == " "}
+        resault = offence(board).detect {|c| c == " "}
       else 
-        random(board)
+        resault = random(board)
       end
+      resault
       binding.pry
     end
     
