@@ -4,11 +4,9 @@ module Players
   
     def move(board)
       d = defence(board).detect {|c| board.cells[c] == " "} += 1
-      o = offence(board).detect {|c| board.cells[c] == " "}+= 1
-      r = random(board)
-      d 
-      o 
-      r += 1
+      o = offence(board).detect {|c| board.cells[c] == " "} += 1
+      r = random(board) += 1
+      binding.pry
       d || o || r
     end
     
