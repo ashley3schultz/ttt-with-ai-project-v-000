@@ -3,10 +3,8 @@ module Players
   class Computer < Player
   
     def move(board)
-      if defence(board)
-        resault = defence(board).detect {|c| board.cells[c] == " "}
-      elsif offence(board)
-        resault = offence(board).detect {|c| board.cells[c] == " "}
+      d = defence(board).detect {|c| board.cells[c] == " "}
+      o = offence(board).detect {|c| board.cells[c] == " "}
       else 
         resault = random(board)
       end
