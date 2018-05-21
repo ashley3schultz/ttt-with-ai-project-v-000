@@ -3,7 +3,7 @@ module Players
   class Computer < Player
   
     def move(board)
-      board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
+      #board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
       find_space(defence(board), board) + 1 || find_space(offence(board), board) + 1 || random(board)
     end
     
