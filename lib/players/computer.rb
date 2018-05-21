@@ -34,7 +34,7 @@ module Players
     end
     
     def find_space(wc, board)
-      wc.detect {|c| c if board.cells[c] == " "}
+      wc.detect {|c| board.cells[c] == " "}
     end
     
     def random(board)
