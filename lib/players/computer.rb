@@ -15,7 +15,7 @@ module Players
       b << board.cells[wc[0]]
       b << board.cells[wc[1]]
       b << board.cells[wc[2]]
-      b.sort == a.sort}
+      wc if b.sort == a.sort}
     end
     
     def offence(board)
