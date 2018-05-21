@@ -18,11 +18,10 @@ WIN_COMBINATIONS = [
   end
   
   def self.setup(num_of_players)
+    if num_of_players.to_i == 2
+      Game.new
     if num_of_players.to_i == 1 
       Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new)
-    elsif num_of_players.to_i == 2
-      Game.new
-    
     
   end 
     
