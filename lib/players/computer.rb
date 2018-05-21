@@ -5,7 +5,7 @@ module Players
     def move(board)
       board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
       binding.pry
-      find_space(defence(board), board) || random(board)
+      find_space(defence(board), board) + 1 || random(board)
     end
     
     def defence(board)
@@ -37,7 +37,7 @@ module Players
     end
     
     def find_space(wc, board)
-      wc.detect { |c| c if board.cells[c] == " "}
+      wc.detect { |c| c + 1 if board.cells[c] == " "}
     end
       
     
