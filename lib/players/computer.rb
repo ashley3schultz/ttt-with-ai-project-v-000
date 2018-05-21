@@ -20,7 +20,7 @@ module Players
         d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
         d << board.cells[wc[1]] if board.cells[wc[1]] == self.token
         d << board.cells[wc[2]] if board.cells[wc[2]] == self.token
-        wc.detect {|c| board.cells[c] == " " && d.size == 2}}
+        wc.detect {|c| c if board.cells[c] == " " && d.size == 2}}
     end 
     
     def offence(board)
@@ -29,7 +29,7 @@ module Players
         o << board.cells[wc[0]] if board.cells[wc[0]] != self.token && board.cells[wc[0]] != " "
         o << board.cells[wc[1]] if board.cells[wc[1]] != self.token && board.cells[wc[1]] != " "
         o << board.cells[wc[2]] if board.cells[wc[2]] != self.token && board.cells[wc[2]] != " "
-        wc.detect {|c| board.cells[c] == " " && o.size == 2}}
+        wc.detect {|c| c if board.cells[c] == " " && o.size == 2}}
     end
     
     def random(board)
