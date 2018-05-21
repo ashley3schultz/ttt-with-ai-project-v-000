@@ -36,7 +36,7 @@ module Players
       cs = c.shuffle
       corner = cs.detect {|n| board.valid_move?(n)}
       if board.valid_move?("5")
-        resault = "5"
+        "5"
       elsif corner != nil 
         corner
       else 
