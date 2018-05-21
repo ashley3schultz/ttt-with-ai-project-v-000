@@ -5,7 +5,11 @@ module Players
     def move(board)
       if defence(board)
         defence(board).detect {|c| c == " "}
-        || offence(board) || random(board)
+      elsif offence(board)
+        offence(board).detect {|c| c == " "}
+      else 
+        random(board)
+      end
       binding.pry
     end
     
