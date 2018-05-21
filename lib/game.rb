@@ -19,6 +19,8 @@ WIN_COMBINATIONS = [
   
   def self.setup
     
+  end 
+    
   
   def current_player
     if board.turn_count.even?

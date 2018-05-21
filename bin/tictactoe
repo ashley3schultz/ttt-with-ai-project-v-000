@@ -7,3 +7,5 @@ puts "please enter number of players (0-2)"
 num_of_players = gets.strip
 .setup(num_of_players)
 .play
+
+bin/tictactoe
