@@ -15,18 +15,18 @@ module Players
     end
     
     def defence(board)
-      me = "X" if self.token == "X"
-      op = "O" if self.token == "X"
-      me = "O" if self.token == "O"
-      op = "X" if self.token == "O"
+      #me = "X" if self.token == "X"
+      #op = "O" if self.token == "X"
+      #me = "O" if self.token == "O"
+      #op = "X" if self.token == "O"
       Game::WIN_COMBINATIONS.detect {|wc| wc.detect {|c|
-      t = self.token
-        d = []
-        d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
-        d << board.cells[wc[1]] if board.cells[wc[1]] == self.token
-        d << board.cells[wc[2]] if board.cells[wc[2]] == self.token
-        d.sort == [""]
-        wc.collect {|c| c if board.cells[c] == " " && d.size == 2}}
+      #t = self.token
+        #d = []
+        #d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
+        #d << board.cells[wc[1]] if board.cells[wc[1]] == self.token
+        #d << board.cells[wc[2]] if board.cells[wc[2]] == self.token
+        wc.sort == [" ","#{self.token}","#{self.token}"]}
+        #wc.collect {|c| c if board.cells[c] == " " && d.size == 2}}
     end 
     
     def offence(board)
