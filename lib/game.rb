@@ -17,7 +17,9 @@ WIN_COMBINATIONS = [
     @player_2 = p2
   end
   
-  def self.setup
+  def self.setup(num_of_players)
+    if num_
+    
     
   end 
     
