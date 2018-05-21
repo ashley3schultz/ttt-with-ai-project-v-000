@@ -4,7 +4,7 @@ module Players
   
     def move(board)
       defence(board) || offence(board) || random(board)
-      binding.pry
+      #binding.pry
     end
     
     def defence(board)
