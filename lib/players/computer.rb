@@ -24,9 +24,10 @@ module Players
     
     def offence(board)
       op = "O" if self.token == "X"
+      op = "X" if self.token == "O"
       a = [" "]
-      a << self.token
-      a << self.token
+      a << op
+      a << op
       Game::WIN_COMBINATIONS.detect {|wc|
       b = []
       b << board.cells[wc[0]]
