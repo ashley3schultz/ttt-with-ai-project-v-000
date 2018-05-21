@@ -4,7 +4,10 @@ module Players
   
     def move(board)
       board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
-      find_space(defence(board), board) + 1 || find_space(offence(board), board) + 1 || random(board)
+      d = find_space(defence(board), board) + 1
+      o = find_space(offence(board), board) + 1
+      
+      find_space(defence(board), board) || find_space(offence(board), board) || random(board)
     end
     
     def defence(board)
