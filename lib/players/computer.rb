@@ -5,6 +5,10 @@ module Players
     def move(board)
       if offense != nil 
         #plays the extra number
+      elsif offence != nil
+        #plays the extra number
+      else
+        
     if o.size == 2
       resault = wc.detect {|i| !o.include?(i)}
     elsif d.size == 2
