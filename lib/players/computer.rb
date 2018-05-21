@@ -37,7 +37,7 @@ module Players
       corner = cs.detect {|n| board.valid_move?(n)}
       if board.valid_move?("5")
         "5"
-      else corner != nil 
+      elsif corner != nil 
         corner
       else 
         rand(1..9)
