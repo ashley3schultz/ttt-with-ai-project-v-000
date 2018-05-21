@@ -33,8 +33,6 @@ module Players
       o = ["2","4","6","8"]
       board.valid_move?("5") || board.valid_move?(c.sample) || board.valid_move?(o.sample)
     end
-    
-    
   end
   
   
