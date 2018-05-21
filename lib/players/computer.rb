@@ -3,11 +3,8 @@ module Players
   class Computer < Player
   
     def move(board)
-      d = 
-      o = 
-      r = random(board)
-      
-      d += 1 || o += 1 || r += 1
+      find_space(board) || random(board)
+      binding.pry
     end
     
     def defence(board)
