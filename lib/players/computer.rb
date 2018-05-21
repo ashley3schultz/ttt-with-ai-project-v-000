@@ -3,7 +3,9 @@ module Players
   class Computer < Player
   
     def move(board)
-      defence(board) || offence(board) || random(board)
+      if defence(board)
+        defence(board).detect {|c| c == " "}
+        || offence(board) || random(board)
       binding.pry
     end
     
