@@ -32,7 +32,12 @@ module Players
     def random(board)
       c = ["1","3","7","9"]
       o = ["2","4","6","8"]
-      board.valid_move?("5") || board.valid_move?(c.sample) || board.valid_move?(o.sample)
+      if board.valid_move?("5")
+        "5"
+      else 
+        rand(1..9).to_s
+        #c.detect {|n| board.valid_move?(n)
+      #board.valid_move?(o.sample)
     end
   end
   
