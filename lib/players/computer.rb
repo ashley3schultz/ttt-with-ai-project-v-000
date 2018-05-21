@@ -3,7 +3,7 @@ module Players
   class Computer < Player
   
     def move(board)
-      find_space(board) || random(board)
+      defence(board) || random(board)
     end
     
     def defence(board)
