@@ -8,7 +8,7 @@ module Players
       nb.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
 
       if defence(nb) != nil
-        resault = defence(nb).detect {|c| c == " "}
+        resault = defence(nb).detect {|c| nb.cells[c] == " "}
       elsif offence(nb) != nil
         resault = offence(nb).detect {|c| c == " "}
       else 
