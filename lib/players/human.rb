@@ -5,7 +5,7 @@ module Players
     def move(board)
      puts "Player '#{self.token}' Please enter 1-9"
      num = gets
-     num.to_s
+     num
     end 
   end  
   
