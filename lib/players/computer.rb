@@ -23,7 +23,7 @@ module Players
     end
     
     def offence(board)
-      if self.token == "X"
+      op = "O" if self.token == "X"
       a = [" "]
       a << self.token
       a << self.token
