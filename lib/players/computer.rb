@@ -11,7 +11,6 @@ module Players
         resault = random(board)
       end
       resault
-      binding.pry
     end
     
     def defence(board)
