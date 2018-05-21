@@ -40,7 +40,7 @@ module Players
     def random(board)
       c = ["1","3","7","9"]
       cs = c.shuffle
-      corner = cs.detect {|n| board.valid_move?(n)}
+      corner = cs.detect {|num| board.valid_move?(num)}
       if board.valid_move?("5")
         "5"
       elsif corner != nil 
@@ -50,4 +50,4 @@ module Players
       end
     end
   end
-end 
+end
