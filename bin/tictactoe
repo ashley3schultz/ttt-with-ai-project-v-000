@@ -2,4 +2,7 @@
 
 require_relative '../config/environment'
 
-play
+puts "Welcome to Tic Tac Toe!"
+Game.new
+
+.play
