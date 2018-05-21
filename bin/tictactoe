@@ -8,4 +8,4 @@ num_of_players = gets.strip
 .setup(num_of_players)
 .play
 
-bin/tictactoe
+#bin/tictactoe
