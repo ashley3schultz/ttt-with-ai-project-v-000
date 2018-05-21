@@ -3,7 +3,6 @@ module Players
   class Computer < Player
   
     def move(board)
-      #board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
       if defence(board)
         resault = find_space(defence(board), board) + 1
       elsif offence(board)
