@@ -3,11 +3,11 @@ module Players
   class Computer < Player
   
     def move(board)
-      d = defence(board).detect {|c| board.cells[c] == " "} 
-      o = offence(board).detect {|c| board.cells[c] == " "}
+      d = defence(board).detect {|c| board.cells[c] == " "} += 1
+      o = offence(board).detect {|c| board.cells[c] == " "}+= 1
       r = random(board)
-      d += 1
-      o += 1
+      d 
+      o 
       r += 1
       d || o || r
     end
