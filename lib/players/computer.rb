@@ -6,8 +6,7 @@ module Players
       board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
       d = find_space(defence(board), board) + 1
       o = find_space(offence(board), board) + 1
-      
-      find_space(defence(board), board) || find_space(offence(board), board) || random(board)
+      d.to_s || o.to_s || random(board)
     end
     
     def defence(board)
