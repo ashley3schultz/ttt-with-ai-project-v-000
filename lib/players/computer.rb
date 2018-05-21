@@ -4,7 +4,7 @@ module Players
   
     def move(board)
       if !defense && !offence
-        "5" || rand(1,3,7,9) || rand(1..9).to_s
+        "5" || "1" || "3" || "7" || "9" || rand(1..9).to_s
       else
         defense || offence
       end
