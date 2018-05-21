@@ -3,11 +3,7 @@ module Players
   class Computer < Player
   
     def move(board)
-      if !defence(board) && !offence(board)
-        random(board)
-      else
-        defence(board) || offence(board)
-      end
+      defence(board) || offence(board) || random(board)
     end
     
     def offence(board)
