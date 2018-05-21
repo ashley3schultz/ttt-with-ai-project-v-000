@@ -4,7 +4,6 @@ module Players
   
     def move(board)
       if !defence(board) && !offence(board)
-        binding.pry
         random(board)
       else
         defence(board) || offence(board)
