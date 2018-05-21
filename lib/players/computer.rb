@@ -3,10 +3,6 @@ module Players
   class Computer < Player
   
     def move(board)
-      
-      nb = Board.new
-      nb.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
-
       if defence(board)
         resault = defence(board).detect {|c| board.cells[c] == " "}
       elsif offence(board)
