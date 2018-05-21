@@ -26,13 +26,14 @@ module Players
     
     def random(board)
       c = ["1","3","7","9"]
-      cr = c.shuffle
-      corner = c.detect {|n| board.valid_move?(n)}
+      cs = c.shuffle
+      corner = cs.detect {|n| board.valid_move?(n)}
       if board.valid_move?("5")
         "5"
-      else 
-        c.detect {|n| board.valid_move?(n)
-      #board.valid_move?(o.sample)
+      else corner != nil 
+        corner
+      #else 
+      #  rand(1..9)
       end
     end
   end
