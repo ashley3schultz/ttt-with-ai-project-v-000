@@ -3,8 +3,8 @@ module Players
   class Computer < Player
   
     def move(board)
-      d = defence(board).detect {|c| board.cells[c] == " "}
-      o = offence(board).detect {|c| board.cells[c] == " "}
+      d = 
+      o = 
       r = random(board)
       
       d += 1 || o += 1 || r += 1
@@ -35,6 +35,15 @@ module Players
       b << board.cells[wc[2]]
       b.sort == a.sort}
     end
+    
+    def find_space(board)
+      if defence(board)
+        defence(board).detect {|c| board.cells[c] == " "}
+      else offence(board)
+        offence(board).detect {|c| board.cells[c] == " "}
+      end
+    end
+      
     
     def random(board)
       c = [0,2,6,8]
