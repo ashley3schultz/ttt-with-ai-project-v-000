@@ -5,7 +5,7 @@ require_relative '../config/environment'
 puts "Welcome to Tic Tac Toe!"
 puts "please enter number of players (0-2)"
 num_of_players = gets.strip
-Game.setup(num_of_players)
-.play
+game = Game.setup(num_of_players)
+game.play
 
 #bin/tictactoe
