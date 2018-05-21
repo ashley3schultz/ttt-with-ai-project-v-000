@@ -17,7 +17,7 @@ module Players
       b << board.cells[wc[1]]
       b << board.cells[wc[2]]
       w << find_space(wc) if b.sort == a.sort}
-      w
+      w.last += 1
     end
     
     def offence(board)
