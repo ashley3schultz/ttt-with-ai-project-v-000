@@ -1,8 +1,10 @@
 module Players
 
   class Computer < Player
+    
+    z = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
   
-    def move(["X", " ", "O", " ", "X", "O", " ", " ", " "])
+    def move(z)
       defence(board) || random(board)
     end
     
