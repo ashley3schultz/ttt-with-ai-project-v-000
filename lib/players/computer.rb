@@ -36,7 +36,7 @@ module Players
       w
     end
     
-    def find_space(wc)
+    def find_space(wc, board)
       wc.detect { |c| c if board.cells[c] == " "}
     end
       
