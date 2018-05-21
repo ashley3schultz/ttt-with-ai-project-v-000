@@ -31,10 +31,13 @@ module Players
       
     resault = wc.detect {|i| !o.include?(i)}
     
-    
-    
-    
     def defence
+      WIN_COMBINATIONS.detect {|wc| 
+        d = []
+        d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
+        d << board.cells[wc[1]] if board.cells[wc[1]] == self.token
+        d << board.cells[wc[2]] if board.cells[wc[2]] == self.token
+        d.size == 2}}
       
     end 
     
