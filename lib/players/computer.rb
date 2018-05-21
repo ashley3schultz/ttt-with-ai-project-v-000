@@ -4,15 +4,7 @@ module Players
   
     def move(board)
       defence(board) || offence(board) || random(board)
-    end
-    
-    def offence(board)
-      Game::WIN_COMBINATIONS.detect {|wc| 
-        o = []
-        o << board.cells[wc[0]] if board.cells[wc[0]] == !self.token && board.cells[wc[0]] != " "
-        o << board.cells[wc[1]] if board.cells[wc[1]] == !self.token && board.cells[wc[1]] != " "
-        o << board.cells[wc[2]] if board.cells[wc[2]] == !self.token && board.cells[wc[2]] != " "
-        wc.detect {|c| board.cells[c] == " "} if o.size == 2 }
+      binding.pry
     end
     
     def defence(board)
@@ -23,6 +15,15 @@ module Players
         d << board.cells[wc[2]] if board.cells[wc[2]] == self.token
         wc.detect {|c| board.cells[c] == " "} if d.size == 2 }
     end 
+    
+    def offence(board)
+      Game::WIN_COMBINATIONS.detect {|wc| 
+        o = []
+        o << board.cells[wc[0]] if board.cells[wc[0]] == !self.token && board.cells[wc[0]] != " "
+        o << board.cells[wc[1]] if board.cells[wc[1]] == !self.token && board.cells[wc[1]] != " "
+        o << board.cells[wc[2]] if board.cells[wc[2]] == !self.token && board.cells[wc[2]] != " "
+        wc.detect {|c| board.cells[c] == " "} if o.size == 2 }
+    end
     
     def random(board)
       c = ["1","3","7","9"]
