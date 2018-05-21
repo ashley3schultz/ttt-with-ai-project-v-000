@@ -3,10 +3,10 @@ module Players
   class Computer < Player
   
     def move(board)
-      if defense == nil && offence == nil
-        
+      if !defense && !offence
+        "5" || rand(1,3,7,9) || rand(1..9).to_s
       else
-        rand(1..9).to_s
+        defense || offence
       end
     end
     
@@ -18,8 +18,6 @@ module Players
         o << board.cells[wc[2]] if board.cells[wc[2]] == !self.token && board.cells[wc[2]] != " "
         wc.detect {|c| board.cells[c] == " "} if o.size == 2 }}
     end
-      
-    resault = wc.detect {|i| !o.include?(i)}
     
     def defence
       WIN_COMBINATIONS.detect {|wc| 
