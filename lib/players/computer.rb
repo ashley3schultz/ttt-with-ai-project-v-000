@@ -3,11 +3,11 @@ module Players
   class Computer < Player
   
     def move(board)
-      #d = defence(board).detect {|c| board.cells[c] == " "}
-      #o = offence(board).detect {|c| board.cells[c] == " "}
+      d = defence(board).detect {|c| board.cells[c] == " "}
+      o = offence(board).detect {|c| board.cells[c] == " "}
       r = random(board)
       binding.pry
-      #d || o || r
+      d || o || r
     end
     
     def defence(board)
@@ -15,20 +15,24 @@ module Players
       a << self.token
       a << self.token
       Game::WIN_COMBINATIONS.detect {|wc|
-      d = []
-      d << board.cells[wc[0]]
-      d << board.cells[wc[1]]
-      d << board.cells[wc[2]]
-      d.sort == a.sort}
+      b = []
+      b << board.cells[wc[0]]
+      b << board.cells[wc[1]]
+      b << board.cells[wc[2]]
+      b.sort == a.sort}
     end
     
     def offence(board)
+      if self.token == "X"
+      a = [" "]
+      a << self.token
+      a << self.token
       Game::WIN_COMBINATIONS.detect {|wc|
-      o = []
-      o << board.cells[wc[0]]
-      o << board.cells[wc[1]]
-      o << board.cells[wc[2]]
-      o.sort == [" ", self.token, self.token]}
+      b = []
+      b << board.cells[wc[0]]
+      b << board.cells[wc[1]]
+      b << board.cells[wc[2]]
+      b.sort == a.sort}
     end
     
     def random(board)
