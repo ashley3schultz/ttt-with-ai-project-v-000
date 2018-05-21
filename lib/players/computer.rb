@@ -10,13 +10,14 @@ module Players
       a = [" "]
       a << self.token
       a << self.token
+      w = []
       Game::WIN_COMBINATIONS.detect {|wc|
       b = []
       b << board.cells[wc[0]]
       b << board.cells[wc[1]]
       b << board.cells[wc[2]]
-      binding.pry
-      wc if b.sort == a.sort}
+      w << find_space(wc) if b.sort == a.sort}
+      w
     end
     
     def offence(board)
@@ -35,8 +36,8 @@ module Players
       w
     end
     
-    def find_space(board)
-      defence(board).detect { |c| board.cells[c] == " "}
+    def find_space(wc)
+      wc.detect { |c| board.cells[c] == " "}
     end
       
     
