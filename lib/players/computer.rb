@@ -46,5 +46,5 @@ module Players
   end
 end 
 
-#nb = Board.new
+
 #board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
