@@ -3,6 +3,6 @@
 require_relative '../config/environment'
 
 puts "Welcome to Tic Tac Toe!"
-Game.new
+puts "please enter number of players (0-2)
 
 .play
