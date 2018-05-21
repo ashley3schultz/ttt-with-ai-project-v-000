@@ -4,7 +4,7 @@ module Players
   
     def move(board)
       if !defense && !offence
-        "5" || "1" || "3" || "7" || "9" || rand(1..9).to_s
+        
       else
         defense || offence
       end
@@ -27,6 +27,9 @@ module Players
         d << board.cells[wc[2]] if board.cells[wc[2]] == self.token
         wc.detect {|c| board.cells[c] == " "} if d.size == 2 }}
     end 
+    
+    def almost_random
+      board.valid_move?("5") || ["1","3","7","9"].sample || ["2","4","6","8"].sample
     
     
     
