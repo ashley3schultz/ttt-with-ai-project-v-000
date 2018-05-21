@@ -19,10 +19,12 @@ module Players
     elsif d.size == 2
       resault = wc.detect {|i| !d.include?(i)}
     else 
-      
-    
+      resault = nil
+    end
       rand(1..9).to_s
     end
+    
+    def offence
     
   end
   
