@@ -23,7 +23,7 @@ WIN_COMBINATIONS = [
     elsif num_of_players.to_i == 1 
       game = Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new)
     else num_of_players.to_i == 0
-      game= Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new)
+      game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new)
     end
     game
   end 
