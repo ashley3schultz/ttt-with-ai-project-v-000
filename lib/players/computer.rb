@@ -7,7 +7,7 @@ module Players
       nb = Board.new
       nb.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
 
-      if defence(board)
+      if defence(nb)
         resault = defence(board).detect {|c| c == " "}
       elsif offence(board)
         resault = offence(board).detect {|c| c == " "}
