@@ -33,11 +33,11 @@ module Players
     end
     
     def find_space(board)
-      i = defence(board).detect {|c| board.cells[c] == " "}
+      i = defence(board).detect { |c| board.cells[c] == " "}
       binding.pry
       i += 1
       #else offence(board)
-        #offence(board).detect {|c| board.cells[c] == " "}
+        #offence(board).detect { |c| board.cells[c] == " "}
       #end
     end
       
