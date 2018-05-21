@@ -4,18 +4,23 @@ module Players
   
     def move(board)
       if defence(board)
-        resault = defence(board).detect {|c| c == " "}
-      elsif offence(board)
+        resault = defence(board).detect {|c| board.cells[c] == " "}
+      elsif offence(board).detect {|c| board.cells[c] == " "}
         resault = offence(board)
       else 
         resault = random(board)
       end
-      resault
+      resault += 1
       binding.pry
     end
     
     def defence(board)
-      Game::WIN_COMBINATIONS.detect {|wc| wc.sort == [" ", self.token, self.token}]}
+      Game::WIN_COMBINATIONS.detect {|wc|
+      d = []
+      d << board.cells[wc[0]]
+      d << board.cells[wc[1]]
+      d << board.cells[wc[2]]
+      d.sort == [" ", self.token, self.token}]}
     end 
     
     def offence(board)
@@ -28,15 +33,15 @@ module Players
     end
     
     def random(board)
-      c = ["1","3","7","9"]
+      c = [0,2,6,8]
       cs = c.shuffle
       corner = cs.detect {|n| board.valid_move?(n)}
       if board.valid_move?("5")
-        "5"
+        4
       elsif corner != nil 
         corner
       else 
-        rand(1..9).to_s
+        rand(0..8)
       end
     end
   end
