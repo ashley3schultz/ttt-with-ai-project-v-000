@@ -3,6 +3,7 @@ module Players
   class Computer < Player
   
     def move(board)
+      board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
       binding.pry
       defence(board) || random(board)
     end
@@ -56,6 +57,3 @@ module Players
     end
   end
 end 
-
-
-#board.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
