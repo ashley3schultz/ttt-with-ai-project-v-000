@@ -25,13 +25,13 @@ module Players
     end 
     
     def random(board)
-      #c = ["1","3","7","9"]
-      #o = ["2","4","6","8"]
+      c = ["1","3","7","9"]
+      corner = c.detect {|n| board.valid_move?(n)
+      o = ["2","4","6","8"]
       if board.valid_move?("5")
         "5"
       else 
-        rand(1..9).to_s
-        #c.detect {|n| board.valid_move?(n)
+        c.detect {|n| board.valid_move?(n)
       #board.valid_move?(o.sample)
       end
     end
