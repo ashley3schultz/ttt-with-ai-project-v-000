@@ -10,3 +10,5 @@ module Players
   
   
 end 
+
+bin/
