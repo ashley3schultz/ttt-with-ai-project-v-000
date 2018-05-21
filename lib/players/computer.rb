@@ -4,7 +4,6 @@ module Players
   
     def move(board)
       find_space(board) || random(board)
-      binding.pry
     end
     
     def defence(board)
@@ -34,8 +33,9 @@ module Players
     end
     
     def find_space(board)
-      cell = defence(board).detect {|c| board.cells[c] == " "}
-      cell += 1
+      i = defence(board).detect {|c| board.cells[c] == " "}
+      binding.pry
+      i += 1
       #else offence(board)
         #offence(board).detect {|c| board.cells[c] == " "}
       #end
