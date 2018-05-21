@@ -3,7 +3,7 @@ module Players
   class Computer < Player
   
     def move(board)
-      d = defence(board).detect {|c| board.cells[c] == " "}
+      d = defence(board).detect {|c| board.cells[c] == " "} 
       o = offence(board).detect {|c| board.cells[c] == " "}
       r = random(board)
       d += 1
@@ -22,12 +22,12 @@ module Players
     end 
     
     def offence(board)
-      Game::WIN_COMBINATIONS.detect {|wc| 
-        o = []
-        o << board.cells[wc[0]] if board.cells[wc[0]] != self.token && board.cells[wc[0]] != " "
-        o << board.cells[wc[1]] if board.cells[wc[1]] != self.token && board.cells[wc[1]] != " "
-        o << board.cells[wc[2]] if board.cells[wc[2]] != self.token && board.cells[wc[2]] != " "
-        o.sort == wc.collect {|c| c if board.cells[c] == " " && o.size == 2}}
+      Game::WIN_COMBINATIONS.detect {|wc|
+      o = []
+      o << board.cells[wc[0]]
+      o << board.cells[wc[1]]
+      o << board.cells[wc[2]]
+      o.sort == [" ", self.token, self.token]}
     end
     
     def random(board)
