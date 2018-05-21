@@ -15,8 +15,10 @@ module Players
     end
     
     def defence(board)
-      X = "X" if self.token == "X"
-      O = "O" if self.token == "O"
+      me = "X" if self.token == "X"
+      op = "O" if self.token == "X"
+      me = "O" if self.token == "O"
+      op = "X" if self.token == "O"
       Game::WIN_COMBINATIONS.detect {|wc| wc.detect {|c|
       t = self.token
         d = []
