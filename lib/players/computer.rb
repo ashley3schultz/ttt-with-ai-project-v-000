@@ -19,7 +19,7 @@ module Players
       #op = "O" if self.token == "X"
       #me = "O" if self.token == "O"
       #op = "X" if self.token == "O"
-      Game::WIN_COMBINATIONS.detect {|wc| wc.detect {|c|
+      Game::WIN_COMBINATIONS.detect {|wc|
       #t = self.token
         #d = []
         #d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
