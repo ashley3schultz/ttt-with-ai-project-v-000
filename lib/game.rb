@@ -64,6 +64,7 @@ WIN_COMBINATIONS = [
         num = current_player.move(board)
     end 
     board.update(num, current_player)
+    board.display
   end
   
   def play
