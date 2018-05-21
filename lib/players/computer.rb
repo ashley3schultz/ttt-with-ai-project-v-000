@@ -15,7 +15,7 @@ module Players
     end
     
     def defence(board)
-      Game::WIN_COMBINATIONS.detect {|wc| 
+      Game::WIN_COMBINATIONS.detect {|wc| wc.detect {|c|
         d = []
         d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
         d << board.cells[wc[1]] if board.cells[wc[1]] == self.token
