@@ -8,11 +8,11 @@ module Players
       nb.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
 
       if defence(nb)
-        resault = defence(board).detect {|c| c == " "}
-      elsif offence(board)
-        resault = offence(board).detect {|c| c == " "}
+        resault = defence(nb).detect {|c| c == " "}
+      elsif offence(nb)
+        resault = offence(nb).detect {|c| c == " "}
       else 
-        resault = random(board)
+        resault = random(nb)
       end
       resault
       binding.pry
