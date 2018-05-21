@@ -17,6 +17,9 @@ WIN_COMBINATIONS = [
     @player_2 = p2
   end
   
+  def self.setup
+    
+  
   def current_player
     if board.turn_count.even?
       @player_1 
