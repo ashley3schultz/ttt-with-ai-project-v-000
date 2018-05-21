@@ -18,8 +18,8 @@ module Players
       d << board.cells[wc[0]]
       d << board.cells[wc[1]]
       d << board.cells[wc[2]]
-      d.sort == [" ", self.token, self.token]}
-    end 
+      d.sort == [" ", "#{self.token}", "#{self.token}"]}
+    end
     
     def offence(board)
       Game::WIN_COMBINATIONS.detect {|wc|
