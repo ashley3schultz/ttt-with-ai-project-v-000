@@ -26,9 +26,9 @@ module Players
         o << board.cells[wc[0]] if board.cells[wc[0]] == !self.token && != " "
         o << board.cells[wc[1]] if board.cells[wc[1]] == !self.token && != " "
         o << board.cells[wc[2]] if board.cells[wc[2]] == !self.token && != " "
-        if o.size == 2
+        o.size == 2}}
           resault = wc.detect {|i| !o.include?(i)}
-        end
+    end
       
     end 
     
