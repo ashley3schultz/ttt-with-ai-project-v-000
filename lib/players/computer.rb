@@ -26,8 +26,8 @@ module Players
     
     def random(board)
       c = ["1","3","7","9"]
-      corner = c.detect {|n| board.valid_move?(n)
-      o = ["2","4","6","8"]
+      cr = c.shuffle
+      corner = c.detect {|n| board.valid_move?(n)}
       if board.valid_move?("5")
         "5"
       else 
