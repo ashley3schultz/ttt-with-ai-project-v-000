@@ -19,12 +19,13 @@ WIN_COMBINATIONS = [
   
   def self.setup(num_of_players)
     if num_of_players.to_i == 2
-      Game.new
+      game = Game.new
     elsif num_of_players.to_i == 1 
-      Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new)
+      game = Game.new(Players::Human.new("X"), Players::Computer.new("O"), Board.new)
     else num_of_players.to_i == 0
-      Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new)
+      game= Game.new(Players::Computer.new("X"), Players::Computer.new("O"), Board.new)
     end
+    game
   end 
     
   
