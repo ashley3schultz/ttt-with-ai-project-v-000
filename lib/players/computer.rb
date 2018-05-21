@@ -1,6 +1,8 @@
 module Players
 
   class Computer < Player
+    
+    attr_reader :WIN_COMBINATIONS
   
     def move(board)
       if !defence && !offence
