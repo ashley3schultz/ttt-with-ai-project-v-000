@@ -3,11 +3,8 @@ module Players
   class Computer < Player
   
     def move(board)
-      if defense != nil 
-        defense.detect {|c| board.cells[c] == " "}
+      if defense == nil && offence == nil
         
-      elsif offence != nil
-        offense.detect {|c| board.cells[c] == " "}
       else
         rand(1..9).to_s
       end
