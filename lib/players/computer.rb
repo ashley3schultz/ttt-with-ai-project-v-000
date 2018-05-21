@@ -19,7 +19,9 @@ module Players
         d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
         d << board.cells[wc[1]] if board.cells[wc[1]] == self.token
         d << board.cells[wc[2]] if board.cells[wc[2]] == self.token
-        wc.detect {|c| board.cells[c] == " "} if d.size == 2}
+        if d.size == 2
+          wc.detect {|c| board.cells[c] == " "}
+        end}
     end 
     
     def offence(board)
