@@ -12,14 +12,14 @@ module Players
       a = [" "]
       a << self.token
       a << self.token
-      w = []
+      w = nil
       Game::WIN_COMBINATIONS.detect {|wc|
       b = []
       b << board.cells[wc[0]]
       b << board.cells[wc[1]]
       b << board.cells[wc[2]]
       w = find_space(wc) if b.sort == a.sort}
-      w.last += 1
+      w
     end
     
     def offence(board)
