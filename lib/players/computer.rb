@@ -7,9 +7,9 @@ module Players
       nb = Board.new
       nb.cells = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
 
-      if defence(nb)
+      if defence(nb) != nil
         resault = defence(nb).detect {|c| c == " "}
-      elsif offence(nb)
+      elsif offence(nb) != nil
         resault = offence(nb).detect {|c| c == " "}
       else 
         resault = random(nb)
