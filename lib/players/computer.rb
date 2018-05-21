@@ -38,6 +38,7 @@ module Players
         rand(1..9).to_s
         #c.detect {|n| board.valid_move?(n)
       #board.valid_move?(o.sample)
+      end
     end
   end
   
