@@ -11,12 +11,13 @@ module Players
     end
     
     def defence(board)
+      a = [" ", "#{self.token}", "#{self.token}"]
       Game::WIN_COMBINATIONS.detect {|wc|
       d = []
       d << board.cells[wc[0]]
       d << board.cells[wc[1]]
       d << board.cells[wc[2]]
-      d.sort == [" ", "#{self.token}", "#{self.token}"]}
+      d.sort == a}
     end
     
     def offence(board)
