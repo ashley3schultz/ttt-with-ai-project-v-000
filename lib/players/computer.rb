@@ -1,10 +1,9 @@
 module Players
 
   class Computer < Player
-    
-    board = ["X", " ", "O", " ", "X", "O", " ", " ", " "]
   
-    def move(z)
+    def move(board)
+      binding.pry
       defence(board) || random(board)
     end
     
@@ -18,9 +17,7 @@ module Players
       b << board.cells[wc[0]]
       b << board.cells[wc[1]]
       b << board.cells[wc[2]]
-      w << find_space(wc) if b.sort == a.sort
-        binding.pry
-      }
+      w << find_space(wc) if b.sort == a.sort}
       w.last += 1
     end
     
