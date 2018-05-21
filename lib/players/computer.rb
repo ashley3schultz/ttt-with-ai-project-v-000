@@ -39,8 +39,8 @@ module Players
         "5"
       else corner != nil 
         corner
-      #else 
-      #  rand(1..9)
+      else 
+        rand(1..9)
       end
     end
   end
