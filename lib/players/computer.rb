@@ -7,12 +7,19 @@ module Players
       
       
       WIN_COMBINATIONS.detect {|wc| 
-    ck = []
-    ck << board.cells[wc[0]] if board.cells[wc[0]] == !self.token 
-    ck << board.cells[wc[1]]
-    ck << board.cells[wc[2]]
-    wc if ck.all? {|x|  x == "X"} || ck.all? {|o| o == "O"}}
+    o = []
+    d = []
     
+    o << board.cells[wc[0]] if board.cells[wc[0]] == !self.token && != " "
+    o << board.cells[wc[1]] if board.cells[wc[1]] == !self.token && != " "
+    o << board.cells[wc[2]] if board.cells[wc[2]] == !self.token && != " "
+    
+    if o.size == 2
+      resault = wc.detect {|i| !o.include?(i)}
+    elsif d.size == 2
+      resault = wc.detect {|i| !d.include?(i)}
+    else 
+      
     
       rand(1..9).to_s
     end
