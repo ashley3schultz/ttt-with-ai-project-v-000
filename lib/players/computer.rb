@@ -3,9 +3,9 @@ module Players
   class Computer < Player
   
     def move(board)
-      d = defence(board).detect {|c| board.cells[c] == " "} += 1
-      o = offence(board).detect {|c| board.cells[c] == " "} += 1
-      r = random(board) += 1
+      d = defence(board).detect {|c| board.cells[c] == " "}
+      o = offence(board).detect {|c| board.cells[c] == " "}
+      r = random(board)
       binding.pry
       d || o || r
     end
