@@ -16,7 +16,9 @@ module Players
       b << board.cells[wc[0]]
       b << board.cells[wc[1]]
       b << board.cells[wc[2]]
-      w << find_space(wc) if b.sort == a.sort}
+      w << find_space(wc) if b.sort == a.sort
+        binding.pry
+      }
       w.last += 1
     end
     
