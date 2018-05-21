@@ -25,14 +25,12 @@ module Players
       a = [" "]
       a << op
       a << op
-      w = []
       Game::WIN_COMBINATIONS.detect {|wc|
       b = []
       b << board.cells[wc[0]]
       b << board.cells[wc[1]]
       b << board.cells[wc[2]]
-      w << find_space(wc) if b.sort == a.sort}
-      w
+      b.sort == a.sort}
     end
     
     def find_space(wc, board)
