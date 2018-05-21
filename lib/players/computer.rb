@@ -4,7 +4,7 @@ module Players
   
     def move(board)
       if defence(board)
-        resault = defence(board)
+        resault = defence(board).detect {|c| c == " "}
       elsif offence(board)
         resault = offence(board)
       else 
@@ -19,13 +19,13 @@ module Players
       #op = "O" if self.token == "X"
       #me = "O" if self.token == "O"
       #op = "X" if self.token == "O"
-      Game::WIN_COMBINATIONS.detect {|wc|
+      Game::WIN_COMBINATIONS.detect {|wc| wc.sort == [" ","#{self.token}","#{self.token}"]}
       #t = self.token
         #d = []
         #d << board.cells[wc[0]] if board.cells[wc[0]] == self.token
         #d << board.cells[wc[1]] if board.cells[wc[1]] == self.token
         #d << board.cells[wc[2]] if board.cells[wc[2]] == self.token
-        wc.sort == [" ","#{self.token}","#{self.token}"]}
+        
         #wc.collect {|c| c if board.cells[c] == " " && d.size == 2}}
     end 
     
