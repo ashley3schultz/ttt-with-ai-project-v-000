@@ -11,6 +11,7 @@ module Players
       a << self.token
       a << self.token
       Game::WIN_COMBINATIONS.detect {|wc|
+      binding.pry
       b = []
       b << board.cells[wc[0]]
       b << board.cells[wc[1]]
