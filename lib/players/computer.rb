@@ -5,8 +5,8 @@ module Players
     def move(board)
       if defence(board)
         resault = defence(board).detect {|c| board.cells[c] == " "}
-      elsif offence(board).detect {|c| board.cells[c] == " "}
-        resault = offence(board)
+      elsif 
+        resault = offence(board).detect {|c| board.cells[c] == " "}offence(board)
       else 
         resault = random(board)
       end
