@@ -7,7 +7,7 @@ module Players
       o = offence(board).detect {|c| board.cells[c] == " "}
       r = random(board)
       binding.pry
-      d || o || r
+      #d || o || r
     end
     
     def defence(board)
