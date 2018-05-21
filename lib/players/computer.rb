@@ -4,13 +4,12 @@ module Players
   
     def move(board)
       if defence(board)
-        resault = defence(board)
+        defence(board)
       elsif offence(board)
-        resault = offence(board)
+        offence(board)
       else 
-        resault = random(board)
+        random(board)
       end
-      resault
     end
     
     def defence(board)
